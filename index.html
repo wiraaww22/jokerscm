@@ -2,48 +2,24 @@
 <html lang="id">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- OG tags = kunci preview -->
+  <!-- OG tags: kunci biar banner muncul di preview bot -->
   <meta property="og:title" content="JOKERSCM Mini App" />
   <meta property="og:description" content="Selamat datang di Mini Apps JOKERSCM! Main lebih praktis, cepat, dan seru tanpa lag. Klik Mulai di bawah ini untuk memulai! 🚀" />
-  <meta property="og:image" content="https://i.postimg.cc/jqMXCgSf/upload-Popup-20250827165352.jpg" />
+  <meta property="og:image" content="https://i.postimg.cc/jqMXCgSf/upload-Popup-20250827165352.jpg?v=5" />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wiraaww22.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0b0f14" />
 
-  <title>JOKERSCM Mini App</title>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <style>
-    body{margin:0;background:#0b0f14;color:#fff;font-family:system-ui,Segoe UI,Roboto,Arial}
-    .wrap{max-width:720px;margin:16px auto;padding:16px}
-    .card{background:#121821;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-    .card img{width:100%;display:block}
-    .content{padding:16px 18px 24px}
-    .title{font-weight:800;font-size:20px;margin:0 0 8px}
-    .desc{opacity:.9;line-height:1.45}
-    .cta{margin-top:16px;padding:12px 16px;border-radius:12px;border:none;font-weight:700;font-size:16px;width:100%;cursor:pointer}
-  </style>
+  <title>JOKERSCM</title>
+
+  <!-- Redirect halus ke project site -->
+  <meta http-equiv="refresh" content="0; url=/jokerscm/">
+  <script>location.replace('/jokerscm/');</script>
+
+  <style>body{background:#0b0f14;color:#fff;font-family:system-ui,Segoe UI,Roboto,Arial;padding:24px}</style>
 </head>
-<body>
-  <div class="wrap">
-    <div class="card">
-      <img src="https://i.postimg.cc/jqMXCgSf/upload-Popup-20250827165352.jpg" alt="Banner" />
-      <div class="content">
-        <h1 class="title">Selamat datang di Mini Apps JOKERSCM!</h1>
-        <p class="desc">
-          Main lebih praktis, cepat, dan seru tanpa lag. Klik Mulai di bawah ini untuk memulai! 🚀
-        </p>
-        <button class="cta" id="btnStart">MULAI</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const tg = window.Telegram?.WebApp;
-    if (tg){ tg.expand(); tg.setHeaderColor("#0b0f14"); tg.setBackgroundColor("#0b0f14"); }
-    document.getElementById('btnStart').onclick = () => {
-      if (tg) tg.HapticFeedback.impactOccurred('medium');
-      alert("Action MULAI jalan. Sambungkan logic lo di sini 🤝");
-    };
-  </script>
-</body>
+<body>Redirecting…</body>
 </html>
