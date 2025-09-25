@@ -2,65 +2,83 @@
 <html lang="id">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- OG tags (kalau link ini dibagikan) -->
+  <!-- OG tags untuk preview Telegram -->
   <meta property="og:title" content="JOKERSCM Mini App" />
   <meta property="og:description" content="Selamat datang di Mini Apps JOKERSCM! Main lebih praktis, cepat, dan seru tanpa lag. Klik Mulai di bawah ini untuk memulai! 🚀" />
-  <meta property="og:image" content="https://i.postimg.cc/jqMXCgSf/upload-Popup-20250827165352.jpg?v=5" />
+  <meta property="og:image" content="https://i.postimg.cc/jqMXCgSf/upload-Popup-20250827165352.jpg?v=12" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://wiraaww22.github.io/jokerscm/" />
+  <meta property="og:url" content="https://cheery-froyo-d13c40.netlify.app/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#0b0f14" />
 
-  <link rel="preload" as="image" href="https://i.postimg.cc/jqMXCgSf/upload-Popup-20250827165352.jpg?v=5">
   <title>JOKERSCM Mini App</title>
-  <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
   <style>
-    :root{color-scheme:dark}
-    *{box-sizing:border-box}
-    body{margin:0;background:#0b0f14;color:#fff;font-family:system-ui,Segoe UI,Roboto,Arial}
-    .wrap{max-width:720px;margin:16px auto;padding:16px}
-    .card{background:#121821;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-    .card img{width:100%;height:auto;display:block}
-    .content{padding:16px 18px 24px}
-    .title{font-weight:800;font-size:20px;margin:0 0 8px}
-    .desc{opacity:.9;line-height:1.45;margin:0}
-    .cta{margin-top:16px;padding:12px 16px;border-radius:12px;border:0;font-weight:700;font-size:16px;width:100%;cursor:pointer;background:#24a0ed;color:#fff}
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #0b0f14;
+      color: #fff;
+      font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 16px auto;
+      padding: 16px;
+    }
+    .card {
+      background: #121821;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .content {
+      padding: 16px 18px 24px;
+    }
+    .title {
+      font-weight: 800;
+      font-size: 20px;
+      margin: 0 0 8px;
+    }
+    .desc {
+      opacity: .9;
+      line-height: 1.45;
+      margin: 0;
+    }
+    .cta {
+      margin-top: 16px;
+      padding: 12px 16px;
+      border: 0;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 16px;
+      width: 100%;
+      background: #24a0ed;
+      color: #fff;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <div class="card" role="region" aria-label="Kartu sambutan JOKERSCM">
-      <img src="https://i.postimg.cc/jqMXCgSf/upload-Popup-20250827165352.jpg?v=5" alt="Banner promo JOKERSCM" />
+    <div class="card">
+      <img src="https://i.postimg.cc/jqMXCgSf/upload-Popup-20250827165352.jpg?v=12" alt="Banner JOKERSCM" />
       <div class="content">
         <h1 class="title">Selamat datang di Mini Apps JOKERSCM!</h1>
         <p class="desc">Main lebih praktis, cepat, dan seru tanpa lag. Klik Mulai di bawah ini untuk memulai! 🚀</p>
-        <button class="cta" id="btnStart" type="button" aria-label="Mulai sekarang">MULAI</button>
+        <button class="cta" type="button">MULAI</button>
       </div>
     </div>
   </div>
-
-  <script>
-    const tg = window.Telegram?.WebApp;
-    if (tg){
-      tg.expand();
-      tg.setHeaderColor("#0b0f14");
-      tg.setBackgroundColor("#0b0f14");
-      tg.MainButton.hide();
-    }
-
-    document.getElementById('btnStart').addEventListener('click', () => {
-      if (tg){
-        tg.HapticFeedback.impactOccurred('medium');
-        // TODO: sambungkan logic lo di sini (open page lain / post data ke bot)
-        tg.showPopup({title:"Gas!", message:"Action MULAI jalan. Sambungkan logic lo di sini 🤝", buttons:[{type:"close"}]});
-      } else {
-        // fallback kalau dibuka di browser biasa
-        alert("MULAI diklik. Buka via Telegram untuk pengalaman penuh.");
-      }
-    });
-  </script>
 </body>
 </html>
